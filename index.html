@@ -16,24 +16,31 @@
 <body>
 	<main>
 		<article class="signup__card">
-			<h1> Learn to code by watching others </h1>
-			<p>
-				See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
-				but understanding how developers think is invaluable.
-			</p>
-			<div class="signup__card-ad">
-				<p> <b>Try it free 7 days</b> then $20/mo. thereafter </p>
+			<div class="signup__card-info">
+				<h1> Learn to code by watching others </h1>
+				<p>
+					See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+					but understanding how developers think is invaluable.
+				</p>
 			</div>
-			<form name="sign-up">
-				<input type="text" required id="first-name" placeholder="First Name" name="firstName">
-				<input type="text" required id="last-name" placeholder="Last Name" name="lastName">
-				<input type="email" required id="email" placeholder="Email Address" name="email">
-				<input type="password" required id="password" placeholder="Password" name="password">
-				<input type="submit" id="submit-btn" value="CLAIM YOUR FREE TRIAL" name="submitBtn">
-				<p> By clicking the button, you are agreeing to our <span class="signup__card-terms"> <b>Terms and Services</b> </span> </p>
-			</form>
+			<div class="signup__card-ctas">
+				<div class=" signup__card-ad">
+					<p> <b>Try it free 7 days</b> then $20/mo. thereafter </p>
+				</div>
+				<form style="position: relative" name="sign-up">
+					<input type="text" required id="first-name" placeholder="First Name" name="firstName">
+					<input type="text" required id="last-name" placeholder="Last Name" name="lastName">
+					<input type="email" required id="email" placeholder="Email Address" name="email">
+					<input type="password" required id="password" placeholder="Password" name="password">
+					<input type="submit" id="submit-btn" value="CLAIM YOUR FREE TRIAL" name="submitBtn">
+					<p class="signup__card-fine-print"> By clicking the button, you are agreeing to our <span class="
+						signup__card-terms"> <b>Terms and
+								Services</b> </span> </p>
+				</form>
+			</div>
 		</article>
 	</main>
+	<script src="/app.js"></script>
 </body>
 
 </html>

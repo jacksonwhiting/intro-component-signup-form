@@ -39,7 +39,7 @@ main {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	row-gap: 1.3rem;
+	gap: 2.5rem;
 	color: white;
 	text-align: center;
 }
@@ -48,13 +48,14 @@ main {
 	font-size: 2rem;
 	font-weight: 700;
 	line-height: 2.25rem;
+	margin-bottom: 1rem;
 }
 
 .signup__card-ad {
 	background-color: var(--blue);
 	padding: .8rem 2.2rem;
 	border-radius: 10px;
-	margin-top: 1.7rem;
+	margin-bottom: 1rem;
 	font-weight: 400;
 }
 
@@ -63,13 +64,12 @@ main {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: .8rem;
 	background-color: white;
 	border-radius: 1rem;
-	padding: 20px;
+	padding: 30px 20px;
 }
 
-.signup__card form > input {
+.signup__card form>input {
 	width: 100%;
 	height: 3.5rem;
 	font-family: 'Poppins', serif;
@@ -78,16 +78,15 @@ main {
 	border: .8px #dedede solid;
 	border-radius: 7px;
 	padding-left: 1rem;
+	margin-top: .8rem;
 }
 
 ::placeholder {
 	color: var(--dark-blue);
 }
 
-.signup__card form > input:invalid {
-}
-
-.signup__card form > p {
+.signup__card-fine-print,
+p.val-warning {
 	color: var(--gayish-blue);
 	padding: 0px 20px 0 20px;
 	font-size: .75rem;
@@ -95,10 +94,11 @@ main {
 	letter-spacing: 0.05rem;
 }
 
-.signup__card form > input[type='submit'] {
+.signup__card form>input[type='submit'] {
 	background-color: var(--green);
 	color: white;
 	cursor: pointer;
+	margin-bottom: .8rem;
 }
 
 .signup__card-terms {
@@ -106,28 +106,67 @@ main {
 	cursor: pointer;
 }
 
+p.val-warning {
+	display: none;
+}
+
+.signup__card-exclaim {
+	display: none;
+}
+
 @media (min-width: 1440px) {
 	.signup__card {
-		display: grid;
-		width: 1440px;
-		grid-template-columns: auto auto;
-		gap: 2rem;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 2.5rem;
+		width: 100%;
+		max-width: 1440px;
+	}
+
+	.signup__card form>input {
+		/* margin-top: .8rem; */
+	}
+
+	/* Adds circular exclamation point if invalid*/
+	.signup__card-exclaim {
+		display: block;
+		position: relative;
+		height: 2rem;
+		width: 2rem;
+		margin-bottom: -2rem;
+		color: white;
+		top: -2.8rem;
+		right: -12rem;
+		background-color: var(--red);
+		line-height: 2rem;
+		border-radius: 50%;
+	}
+
+	.signup__card-info {
+		width: 50%;
+		max-width: 525px;
+		text-align: left;
+	}
+
+	.signup__card-ctas {
+		width: 50%;
+		max-width: 540px;
 	}
 
 	.signup__card h1 {
-		grid-column: 1;
-		font-size: 3.125;
+		font-size: 3.5rem;
+		line-height: 55px;
 	}
 
-	.signup__card > p {
-		grid-column: 1;
+	p.val-warning {
+		display: block;
+		width: 100%;
+		text-align: right;
+		color: var(--red)
 	}
 
-	.signup__card-ad {
-		grid-column: 2;
-	}
-
-	.signup__card form {
-		grid-column: 2;
+	input.val-warning::placeholder {
+		color: var(--red)
 	}
 }
