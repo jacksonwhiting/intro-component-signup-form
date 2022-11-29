@@ -124,10 +124,6 @@ p.val-warning {
 		max-width: 1440px;
 	}
 
-	.signup__card form>input {
-		/* margin-top: .8rem; */
-	}
-
 	/* Adds circular exclamation point if invalid*/
 	.signup__card-exclaim {
 		display: block;
